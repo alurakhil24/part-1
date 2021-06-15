@@ -14,7 +14,7 @@ describe("Application functionalit tests", () => {
     expect(utils.getByText(/about/i)).toBeInTheDocument();
     expect(utils.getByText(/hello world/i)).toBeInTheDocument();
   });
-  it("goes to respective route when clicked", () => {
+  it("should navigate to respective route when clicked", () => {
     const utils = render(
       <MemoryRouter>
         <App />
