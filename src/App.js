@@ -4,26 +4,24 @@ import About from "./views/about";
 import SignIn from "./views/signin";
 import Layout from "./components/Layout";
 import { AuthStateProvider } from "./hooks/useAuthState";
-function App() {
+
+export function App() {
   return (
-    <BrowserRouter>
-      <Layout>
-        <AuthStateProvider>
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/signin">
-              <SignIn />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </AuthStateProvider>
-      </Layout>
-    </BrowserRouter>
+    <Layout>
+      <AuthStateProvider>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/signin">
+            <SignIn />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </AuthStateProvider>
+    </Layout>
   );
 }
-
 export default App;
